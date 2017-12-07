@@ -1,0 +1,972 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"o",
+				"observable"
+			],
+			[
+				"loat",
+				"locations"
+			],
+			[
+				"model",
+				"modelView"
+			],
+			[
+				"info",
+				"infoWindow"
+			],
+			[
+				"getEle",
+				"getElementById〔function〕"
+			],
+			[
+				"geo",
+				"geometry"
+			],
+			[
+				"infowin",
+				"infowindow.open"
+			],
+			[
+				"scr",
+				"script"
+			],
+			[
+				"render",
+				"renderCount"
+			],
+			[
+				"cat",
+				"catCountTextNode"
+			],
+			[
+				"crea",
+				"createTextNode〔function〕"
+			],
+			[
+				"clicked",
+				"clickedPic"
+			],
+			[
+				"get",
+				"getElementById〔function〕"
+			],
+			[
+				"click",
+				"clickedList"
+			],
+			[
+				"catNam",
+				"catNameTextNode〔variable〕"
+			],
+			[
+				"in",
+				"innerHTML"
+			],
+			[
+				"rend",
+				"renderDisplay"
+			],
+			[
+				"ren",
+				"renderList"
+			],
+			[
+				"my",
+				"myCount2"
+			],
+			[
+				"console",
+				"console.log"
+			],
+			[
+				"conso",
+				"console.log"
+			],
+			[
+				"remo",
+				"removeChild〔function〕"
+			],
+			[
+				"displ",
+				"displayCat〔function〕"
+			],
+			[
+				"docum",
+				"document.getElementById(\"display"
+			],
+			[
+				"re",
+				"remove〔function〕"
+			],
+			[
+				"the",
+				"theList"
+			],
+			[
+				"theList",
+				"theList3"
+			],
+			[
+				"count",
+				"countCopy"
+			],
+			[
+				"thel",
+				"theList3"
+			],
+			[
+				"getElem",
+				"getElementsByTagName〔function〕"
+			],
+			[
+				"thelis",
+				"theList2"
+			],
+			[
+				"theL",
+				"theList2"
+			],
+			[
+				"g",
+				"getElementsByName〔function〕"
+			],
+			[
+				"coun",
+				"countCopy〔argument〕"
+			],
+			[
+				"cli",
+				"clicker1"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"scroll",
+				"scrollTop〔variable〕"
+			],
+			[
+				"pi",
+				"pizza"
+			],
+			[
+				"new",
+				"newwidth〔variable〕"
+			],
+			[
+				"windo",
+				"windowWidth〔variable〕"
+			],
+			[
+				"qer",
+				"querySelectorAll"
+			],
+			[
+				"cons",
+				"console.log"
+			],
+			[
+				"random",
+				"randomPizzaContainer"
+			],
+			[
+				"randomPi",
+				"randomPizzaContainer"
+			],
+			[
+				"img",
+				"img_small"
+			],
+			[
+				"quer",
+				"querySelectorAll"
+			],
+			[
+				"off",
+				"offsetWidth"
+			],
+			[
+				"randomPiz",
+				"randomPizzaContainer"
+			],
+			[
+				"quar",
+				"querySelectorAll"
+			],
+			[
+				"win",
+				"windowwidth〔variable〕"
+			],
+			[
+				"clas",
+				"classList"
+			],
+			[
+				"post",
+				"postMessage"
+			],
+			[
+				"this",
+				"this.sprite"
+			],
+			[
+				"gem",
+				"gemSize〔variable〕"
+			],
+			[
+				"all",
+				"allGems〔variable〕"
+			],
+			[
+				"doc",
+				"document〔variable〕"
+			],
+			[
+				"gam",
+				"gameOver"
+			],
+			[
+				"text",
+				"text-align-last"
+			],
+			[
+				"sco",
+				"score〔function〕"
+			],
+			[
+				"proto",
+				"prototype"
+			],
+			[
+				"ima",
+				"images"
+			],
+			[
+				"eney",
+				"enemy's"
+			],
+			[
+				"enem",
+				"enemy〔argument〕"
+			],
+			[
+				"en",
+				"enemy"
+			],
+			[
+				"ene",
+				"enemy's"
+			],
+			[
+				"pro",
+				"prototype"
+			],
+			[
+				"En",
+				"Enemy"
+			],
+			[
+				"pr",
+				"prototype"
+			],
+			[
+				"make",
+				"makePixelGrayScale"
+			],
+			[
+				"bott",
+				"bottomLineText〔variable〕"
+			],
+			[
+				"display",
+				"displayFooter"
+			],
+			[
+				"formattedOnline",
+				"formattedOnlineSchool"
+			],
+			[
+				"formattedOnlin",
+				"formattedOnlineTitle"
+			],
+			[
+				"child",
+				"children〔function〕"
+			],
+			[
+				"formattedOn",
+				"formattedOnlineTitle〔variable〕"
+			],
+			[
+				"disp",
+				"displayEducation〔function〕"
+			],
+			[
+				"format",
+				"formattedSchoolName〔variable〕"
+			],
+			[
+				"HTMLscho",
+				"HTMLschoolLocation〔variable〕"
+			],
+			[
+				"d",
+				"date"
+			],
+			[
+				"HTMLsc",
+				"HTMLschoolName〔variable〕"
+			],
+			[
+				"formattedM",
+				"formattedMsg"
+			],
+			[
+				"formattedProj",
+				"formattedProjTitle〔variable〕"
+			],
+			[
+				"inter",
+				"internationalizeButton〔variable〕"
+			],
+			[
+				"formated",
+				"formattedWorkDates〔variable〕"
+			],
+			[
+				"formattedWork",
+				"formattedWorkTitle"
+			],
+			[
+				"formatt",
+				"formattedWorkEmployer〔variable〕"
+			],
+			[
+				"empl",
+				"employer"
+			],
+			[
+				"formatted",
+				"formattedWorkTitle〔variable〕"
+			],
+			[
+				"formattedWo",
+				"formattedWorkEmployer"
+			],
+			[
+				"formatedWok",
+				"formattedWorkEmployer〔variable〕"
+			],
+			[
+				"HTMLwork",
+				"HTMLworkTitle〔variable〕"
+			],
+			[
+				"emp",
+				"employer"
+			],
+			[
+				"form",
+				"formattedName〔variable〕"
+			],
+			[
+				"Develo",
+				"Development"
+			],
+			[
+				"formattedEdu",
+				"formattedEduName"
+			],
+			[
+				"HTMLskills",
+				"HTMLskillsStart〔variable〕"
+			],
+			[
+				"HTMLworkD",
+				"HTMLworkDescription〔variable〕"
+			],
+			[
+				"bo",
+				"bottles"
+			],
+			[
+				"data",
+				"data-target=〔attribute〕"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"tet",
+				"text-uppercase"
+			],
+			[
+				"moda",
+				"modal-desc"
+			],
+			[
+				"u",
+				"udacity-2.png"
+			],
+			[
+				"dat",
+				"data-target=〔attribute〕"
+			],
+			[
+				"backg",
+				"background-color"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"im",
+				"img-responsive"
+			],
+			[
+				"HTMl",
+				"HTML5_CSS_JavaScript.png"
+			],
+			[
+				"col-md",
+				"class=\"col-md-4"
+			],
+			[
+				"col",
+				"col-md-4"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"margin-",
+				"margin-right"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"mx",
+				"max-width"
+			],
+			[
+				"pad",
+				"padding-bottom"
+			],
+			[
+				"box",
+				"box-sizing"
+			],
+			[
+				"font-",
+				"font-size"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"box-",
+				"box-shadow"
+			],
+			[
+				"list-styl",
+				"list-style-type"
+			],
+			[
+				"al",
+				"alt\tAttr"
+			],
+			[
+				"fig",
+				"figcaption\tTag"
+			],
+			[
+				"ran",
+				"random_names"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 219.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"pyt",
+				"SublimeREPL: Python - IPython"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"set pytho",
+				"Set Syntax: Python"
+			]
+		],
+		"width": 528.0
+	},
+	"console":
+	{
+		"height": 260.0,
+		"history":
+		[
+			"rails s",
+			"git init",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/neighborhood_map2/index.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/neighborhood_map/example.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/neighborhood_map/index.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/neighborhood_map/css/style.css",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/neighborhood_map/js/map.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/ud989-pizzamvo-master/index.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/Udacity_AJAX_INIT/minicourse-ajax-project/index.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/Udacity_AJAX_INIT/minicourse-ajax-project/js/script.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/udacity-map/index2.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/udacity-map/index.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/ud989-todo-app/js/app.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/ud989-todo-app/js/collections/todos.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/ud989-todo-app/index.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/ud989-todo-app/js/models/todo.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/ud989-todo-app/js/routers/router.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/ud989-todo-app/js/views/todo-view.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/ud989-todo-app/js/views/app-view.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/ud989-todo-app-master/js/collections/todos.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/ud989-todo-app-master/index.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/ud989-todo-app-master/bower.json",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/ud989-school-attendance-master/css/style.css",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/ud989-school-attendance-master/css/normalize.css",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/ud989-school-attendance-master/js/app.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/ud989-school-attendance-master/index.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/cat_clicker_premium_pro/index.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/cat_clicker_premium_pro/style.css",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/cat_clicker_premium_pro/clicker.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/cat_clicker_premium/main.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/cat_clicker_premium/index.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/ud989-retain-master/index.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/ud989-retain-master/js/retain.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/my_cat_clicker/index.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/my_cat_clicker/clicker.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/ud989-cat-clicker-andy-master/index.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/ud989-cat-clicker-andy-master/app.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/ud989-retain-master/css/retain.css",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/ud989-cat-clicker-andy-master/README.md",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/ud989-cat-clicker-andy-master/jquery.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/cat_clicker/main.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/cat_clicker_premium/script.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/cat_clicker/index.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/frontend-nanodegree-mobile-portfolio-master/js/perfmatters.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/frontend-nanodegree-mobile-portfolio-master/index.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/frontend-nanodegree-mobile-portfolio-master/views/pizza.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/frontend-nanodegree-mobile-portfolio-master/views/js/main.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/cat_clicker/script.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/minicourse-ajax-project/js/script.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/minicourse-ajax-project/index.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/Udacity_AJAX_INIT/minicourse-ajax-project/js/libs/jquery.min.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/frontend-nanodegree-mobile-portfolio-master/README.md",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/frontend-nanodegree-mobile-portfolio-master/css/style.css",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/frontend-nanodegree-mobile-portfolio-master/optimized/css/style.css",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/frontend-nanodegree-mobile-portfolio-master/views/css/style.css",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/frontend-nanodegree-mobile-portfolio-master_1/README.md",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/frontend-nanodegree-mobile-portfolio-master/project-2048.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/pizza-perf-master/pizza.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/pizza-perf-master/js/main.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/frontend-nanodegree-mobile-portfolio-master_1/views/js/main.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/frontend-nanodegree-mobile-portfolio-master_1/views/pizza.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/frontend-nanodegree-mobile-portfolio-master/css/print.css",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/frontend-nanodegree-mobile-portfolio-master/img_small/js/perfmatters.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/frontend-nanodegree-mobile-portfolio-master_1/index.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/news-aggregator-master/index.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/news-aggregator-master/scripts/data.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/news-aggregator-master/styles/app.css",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/news-aggregator-master/scripts/app.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/news-aggregator-master/scripts/worker.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/web-workers-demo-master/scripts/worker.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/news-aggregator-master/scripts/namespace.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/box-recalc-style-slow.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/qrcode-slow/app/scripts/main.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/qrcode-slow/app/index.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/web-workers-demo-master/scripts/time-animator.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/web-workers-demo-master/scripts/imageManips.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/web-workers-demo-master/scripts/image-app.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/web-workers-demo-master/index.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/qrcode-slow/gulpfile.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/qrcode-slow/node_modules/deprecated/index.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/qrcode-slow/node_modules/minimatch/minimatch.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/frontend-nanodegree-mobile-portfolio-master/project-mobile.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/GRUNT/grunt-workflow-guide-master/grunt_tasks/javascript.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/GRUNT/grunt-workflow-guide-master/Gruntfile.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/frontend-nanodegree-arcade-game-master/frontend-nanodegree-arcade-game-master/js/engine.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/frontend-nanodegree-arcade-game-master/frontend-nanodegree-arcade-game-master/js/app.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/frontend-nanodegree-arcade-game-master/frontend-nanodegree-arcade-game-master/css/style.css",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/frontend-nanodegree-arcade-game-master/frontend-nanodegree-arcade-game-master/js/resources.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/frontend-nanodegree-arcade-game-master/frontend-nanodegree-arcade-game-master/index.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/frontend-nanodegree-arcade-game-master/frontend-nanodegree-arcade-game-master/README.md",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/simple_canvas.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/Building_Resume/frontend-nanodegree-resume/README.md",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/Building_Resume/frontend-nanodegree-resume/js/resumeBuilder.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/pixel.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/practice_markdown.md",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/HTML5/grayscale.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/meme/MemeMaker.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/Building_Resume/frontend-nanodegree-resume/js/helper.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/Building_Resume/frontend-nanodegree-resume/css/style.css",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/Building_Resume/frontend-nanodegree-resume/index.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/jQuery-Sample-Site/jQuery Sample Site/index.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/jQuery-Sample-Site/jQuery Sample Site/app.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/jQuery-Sample-Site/__MACOSX/._jQuery Sample Site",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/Building_Resume/frontend-nanodegree-resume/images/fry.jpg",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/PROECT 1 Build a Portfolio v2/css/small.css",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/PROECT 1 Build a Portfolio v2/css/styles.css",
+		"/C/Users/__pingping/Desktop/test.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/PROECT 1 Build a Portfolio v2/index.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/PROJECT 1 Build a Portfolio/index.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/PROJECT 1 Build a Portfolio/css/styles.css",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/PROJECT 1 Build a Portfolio/css/medium.css",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/PROJECT 1 Build a Portfolio/css/small.css",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/PROJECT 1 Build a Portfolio/js/javascript.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/Portfolio/framework/bootstrap/css/bootstrap.css",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/PROJECT 1 Build a Portfolio//cssstyles.css",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/Project-Part-1-Start/css/main.css",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/Project-Part-1-Start/index.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/Project-Part-3-Start/index.html",
+		"/C/Program Files/ImageMagick-7.0.4-Q16/delegates.xml",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/Project-Part-1-Start/Gruntfile.js",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/RWDF L5 Start/Start/responsive.css",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/RWDF L5 Start/Start/main.css",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/RWDF L5 Start/Start/index.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/RWDF L4 Start/Start/index.html",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/RWDF L4 Start/Start/main.css",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/fend-animal-trading-cards-master/styles.css",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/making-peach-ice-cream/css/styles.css",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/media/css/main.css",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/RWDF L4 Solution/Solution/main.css",
+		"/C/Users/__pingping/Desktop/NANODEGREE PROGRAM/Front-End/Start/index.html"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 122.0,
+		"where_history":
+		[
+			"C:\\Users\\__pingping\\Desktop\\NANODEGREE PROGRAM\\Front-End\\HTML5\\frontend-nanodegree-mobile-portfolio-master\\js",
+			"<project>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"hidemarkers",
+			"id",
+			"hide",
+			"searchboxplace",
+			"sear",
+			"searx",
+			"filter",
+			"markers[",
+			"bound",
+			"toggle",
+			"drawing",
+			"var marker",
+			"AIzaSyDvx7rfZsT3d0D0BQ0BEJRLA8_zbI2kcvs",
+			"dbclick",
+			"p",
+			"localStorage",
+			"noteList",
+			"optim",
+			"sizeSwitcher",
+			"newwidth",
+			"profile",
+			"jpg",
+			"pizzeria",
+			"strong",
+			"randomPizza",
+			"\").\n",
+			"randomPizz",
+			"random",
+			"randome",
+			"container",
+			"random",
+			"perfmatters.js",
+			"perform",
+			"perfo",
+			"performance",
+			"profil",
+			"        \n",
+			"img",
+			"colorize",
+			"scroll",
+			"onscol",
+			"onscroll",
+			"load",
+			"onscroll",
+			"loader",
+			"png",
+			"[",
+			"png",
+			"addeven",
+			", {passive: true}",
+			"addeve",
+			"captureframe.bind",
+			"captureframe",
+			"setin",
+			"img",
+			"floor",
+			"#scoreboard {\n\tmargin-left: px;\n\ttext-align: left;\n}",
+			"gem",
+			"console",
+			"upda",
+			"over",
+			"lose",
+			";\n",
+			"over",
+			"stop",
+			"gameover",
+			"removes",
+			"onload",
+			"image",
+			"handle",
+			"handleinput",
+			"majors",
+			"enemy",
+			"footer",
+			"bio.dis",
+			"bio",
+			";\n",
+			"skills-h3",
+			"intern",
+			"for (",
+			"createMapMarker",
+			"skill",
+			"img",
+			"pic",
+			"city",
+			");\n",
+			"5",
+			"modal",
+			"<hr",
+			"hr",
+			".jpg",
+			"images_src",
+			"volt",
+			"article",
+			"h1",
+			"td",
+			"nav",
+			"drawer",
+			"menu",
+			"script",
+			"nav__list",
+			"script",
+			"nav",
+			"body",
+			"weath",
+			"nav__list",
+			"drawer",
+			"nav",
+			"news",
+			";\n",
+			"\t\t\t\n",
+			">\n",
+			"class",
+			"\">\n",
+			"\t\t\t\t<span>This specific design features a beach-themed fading sunset with palm trees. The fading vertical bars in the sun resemble warmth as it fades away into the sunset.</span>\n",
+			"\">\n",
+			"18",
+			"324",
+			"375",
+			"image",
+			"console",
+			"');\n",
+			"onclick",
+			"removeFromDom",
+			"removeFromeDOM",
+			"back",
+			"ingredientList",
+			"“"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"images",
+			"\"",
+			"",
+			"50",
+			"5",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 40.0
+	},
+	"input":
+	{
+		"height": 61.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.sublime-project",
+	"replace":
+	{
+		"height": 75.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 355.0,
+	"status_bar_visible": false,
+	"template_settings":
+	{
+	}
+}

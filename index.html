@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bobalicious!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<script
+	  src="https://code.jquery.com/jquery-3.2.1.min.js"
+	  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+	  crossorigin="anonymous"></script>
+
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<div>
+					<input data-bind="textInput: search" id="filter-box" type="text" placeholder="Enter a Boba Place">
+				</div>
+				<div class="collapse show" id="side-bar">
+					<ul class="list-group" data-bind="foreach: filterSearch">
+						<li class="list-group-item">
+							<span data-bind="text: title, click: listClick"></span>
+							<!-- <span data-bind="text: title"></span> -->
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="col-md-9">
+				<div id="menu-bar">
+					<a><img id="menu-icon" src="open-iconic-master/svg/menu.svg" data-toggle="collapse" data-target="#side-bar" aria-expanded="true" aria-controls="side-bar"></a>
+				</div>
+				<div id="map"></div>
+			</div>
+		</div>
+	</div>
+	<script async defer
+        src="https://maps.googleapis.com/maps/api/js?libraries=places,geometry,drawing&key=AIzaSyDvx7rfZsT3d0D0BQ0BEJRLA8_zbI2kcvs&v=3&callback=initMap">
+    </script>
+    <script type="text/javascript" src="js/knockout-3.4.2.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+  </body>
+
+</body>
+</html>
