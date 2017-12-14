@@ -112,16 +112,13 @@ function authenticateYelp() {
 
 	var requestURL = 'https://api.yelp.com/oauth2/token';
 	var request = new XMLHttpRequest();
-	// var body = {
-	// 	grant_type: "client_credentials\n",
-	// 	client_id: "HH-wWLOGhsYppUim8k_DDw",
-	// 	client_secret: "4mqMq733uKpPi4LEGpHGPseJ9iDezRVOSREJbbbDJ9kUZXbV702BsqduZ5WQELUX"
-	// }
+
 	var jsonResponse;
 
 	request.open('POST', proxyURL + '/' + requestURL, true);
 	request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-	request.send("grant_type=client_credentials&client_id=HH-wWLOGhsYppUim8k_DDw&client_secret=4mqMq733uKpPi4LEGpHGPseJ9iDezRVOSREJbbbDJ9kUZXbV702BsqduZ5WQELUX");
+	request.setRequestHeader("Authorization", "Bearer Wo_d2-5p_y2BCYMv2lHSRjkEGDXk4NeiU73lOtwSgZEeGOTR5pnbNxl4ymZ1E4REXrB9lSrny_VxO5JxYGiBahIzkH1zYLTdi0u_0loblRslBBAsjWzkX8zJzlISWnYx")
+	// request.send("grant_type=client_credentials&client_id=HH-wWLOGhsYppUim8k_DDw&client_secret=4mqMq733uKpPi4LEGpHGPseJ9iDezRVOSREJbbbDJ9kUZXbV702BsqduZ5WQELUX");
 
 	request.onreadystatechange = function() {
 		if(request.readyState == 4 && request.status == 200){
@@ -141,10 +138,12 @@ function yelpSearch(marker) {
 	var longitude = marker.getPosition().lng();
 	var title = marker.title;
 	var params = "term=" + title + "&latitude=" + latitude + "&longitude=" + longitude + "&limit=10";
+	// console.log(params);
 	var jsonResponse;
 	request.open('GET', proxyURL + '/' + searchURL + "?" + params, true);
-	request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	// request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 	request.setRequestHeader("Authorization", "Bearer " + access_token);
+	// request.setRequestHeader("Origin", "x-requested-with");
 	request.send();
 
 	request.onreadystatechange = function() {
