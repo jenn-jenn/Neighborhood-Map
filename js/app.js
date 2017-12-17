@@ -31,6 +31,7 @@ function initMap() {
 	});
 
 	authenticateYelp();
+	console.log("Access Token = " + access_token);
 
 	function populateInfoWindow(marker, infowindow) {
 		if(infowindow.marker != marker) {
@@ -38,6 +39,7 @@ function initMap() {
 
 			// infowindow.setContent('<div>' + marker.title + '</div>');
 			yelpSearch(marker);
+			console.log("Business address " + businessAddress);
 			var content = '<div>' + marker.title + '</div>' +
 			'<div>' + businessAddress + '</div>';
 			// '<div>' + businessAddress[1] + '</div>'
@@ -117,18 +119,20 @@ function authenticateYelp() {
 
 	request.open('POST', proxyURL + '/' + requestURL, true);
 	request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-	request.setRequestHeader("Authorization", "Bearer Wo_d2-5p_y2BCYMv2lHSRjkEGDXk4NeiU73lOtwSgZEeGOTR5pnbNxl4ymZ1E4REXrB9lSrny_VxO5JxYGiBahIzkH1zYLTdi0u_0loblRslBBAsjWzkX8zJzlISWnYx")
-	// request.send("grant_type=client_credentials&client_id=HH-wWLOGhsYppUim8k_DDw&client_secret=4mqMq733uKpPi4LEGpHGPseJ9iDezRVOSREJbbbDJ9kUZXbV702BsqduZ5WQELUX");
-
+	// request.setRequestHeader("Authorization", "Bearer Wo_d2-5p_y2BCYMv2lHSRjkEGDXk4NeiU73lOtwSgZEeGOTR5pnbNxl4ymZ1E4REXrB9lSrny_VxO5JxYGiBahIzkH1zYLTdi0u_0loblRslBBAsjWzkX8zJzlISWnYx")
+	request.send("grant_type=client_credentials&client_id=HH-wWLOGhsYppUim8k_DDw&client_secret=4mqMq733uKpPi4LEGpHGPseJ9iDezRVOSREJbbbDJ9kUZXbV702BsqduZ5WQELUX");
+	console.log(request);
 	request.onreadystatechange = function() {
 		if(request.readyState == 4 && request.status == 200){
 			var jsonResponse = JSON.parse(request.response);
 			storeToken(jsonResponse);
+			console.log("Request.response = " + request.response);
 		}
 	}
 }
 function storeToken(response) {
 	access_token = response.access_token;
+	console.log("storeToken = " + access_token);
 }
 
 function yelpSearch(marker) {
@@ -141,7 +145,7 @@ function yelpSearch(marker) {
 	// console.log(params);
 	var jsonResponse;
 	request.open('GET', proxyURL + '/' + searchURL + "?" + params, true);
-	// request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 	request.setRequestHeader("Authorization", "Bearer " + access_token);
 	// request.setRequestHeader("Origin", "x-requested-with");
 	request.send();
@@ -158,7 +162,7 @@ function storeBusiness(response) {
 	businessInfo = response.businesses[0];
 	businessID = businessInfo.id;
 	businessAddress = businessInfo.location.display_address[0];
-	console.log(businessInfo);
+	// console.log(businessInfo);
 	// console.log(businessID);
-	console.log(businessAddress);
+	// console.log(businessAddress);
 }
