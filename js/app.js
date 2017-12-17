@@ -31,25 +31,21 @@ function initMap() {
 	});
 
 	authenticateYelp();
-	console.log("Access Token = " + access_token);
 
 	function populateInfoWindow(marker, infowindow) {
 		if(infowindow.marker != marker) {
 			infowindow.marker = marker;
 
 			// infowindow.setContent('<div>' + marker.title + '</div>');
-			yelpSearch(marker);
-			console.log("Business address " + businessAddress);
-			var content = '<div>' + marker.title + '</div>' +
-			'<div>' + businessAddress + '</div>';
-			// '<div>' + businessAddress[1] + '</div>'
-			infowindow.setContent(content);
+			yelpSearch(marker, infowindow);
+
+			// console.log("Business address " + businessAddress); // undefined
 			infowindow.open(map, marker);
 			infowindow.addListener('closeclick', function() {
 				infowindow.marker = null;
 			});
 		}
-	}
+	} // QUESTION: why does previous marker's infowindow content shows up in another markers
 
 	// knockout for list, filter, and anything subject to change, tracking click events on list
 	// NOT by knockout Maps API, creating markers, tracking click events on markers, making map, refreshing map
@@ -121,21 +117,20 @@ function authenticateYelp() {
 	request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 	// request.setRequestHeader("Authorization", "Bearer Wo_d2-5p_y2BCYMv2lHSRjkEGDXk4NeiU73lOtwSgZEeGOTR5pnbNxl4ymZ1E4REXrB9lSrny_VxO5JxYGiBahIzkH1zYLTdi0u_0loblRslBBAsjWzkX8zJzlISWnYx")
 	request.send("grant_type=client_credentials&client_id=HH-wWLOGhsYppUim8k_DDw&client_secret=4mqMq733uKpPi4LEGpHGPseJ9iDezRVOSREJbbbDJ9kUZXbV702BsqduZ5WQELUX");
-	console.log(request);
 	request.onreadystatechange = function() {
 		if(request.readyState == 4 && request.status == 200){
 			var jsonResponse = JSON.parse(request.response);
 			storeToken(jsonResponse);
-			console.log("Request.response = " + request.response);
+			// console.log("Request.response = " + request.response);
 		}
 	}
 }
 function storeToken(response) {
 	access_token = response.access_token;
-	console.log("storeToken = " + access_token);
+	// console.log("storeToken = " + access_token);
 }
 
-function yelpSearch(marker) {
+function yelpSearch(marker, infowindow) {
 	var searchURL = 'https://api.yelp.com/v3/businesses/search';
 	var request = new XMLHttpRequest();
 	var latitude = marker.getPosition().lat();
@@ -146,23 +141,31 @@ function yelpSearch(marker) {
 	var jsonResponse;
 	request.open('GET', proxyURL + '/' + searchURL + "?" + params, true);
 	request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	// console.log("yelpSearch " + access_token);
 	request.setRequestHeader("Authorization", "Bearer " + access_token);
 	// request.setRequestHeader("Origin", "x-requested-with");
 	request.send();
 
 	request.onreadystatechange = function() {
 		if(request.readyState == 4 && request.status == 200) {
-			jsonReponse = JSON.parse(request.response);
-			storeBusiness(jsonReponse);
+			jsonResponse = JSON.parse(request.response);
+			storeBusiness(jsonResponse, infowindow, marker);
 		}
 	}
+
+	// console.log(businessInfo);
 }
 
-function storeBusiness(response) {
+function storeBusiness(response, infowindow, marker) {
 	businessInfo = response.businesses[0];
 	businessID = businessInfo.id;
 	businessAddress = businessInfo.location.display_address[0];
 	// console.log(businessInfo);
 	// console.log(businessID);
 	// console.log(businessAddress);
+
+	var content = '<div>' + marker.title + '</div>' +
+	'<div>' + businessAddress + '</div>';
+	// '<div>' + businessAddress[1] + '</div>'
+	infowindow.setContent(content);
 }
