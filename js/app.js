@@ -4,6 +4,8 @@ var businessInfo;
 var businessID;
 var businessRating;
 var businessAddress;
+var businessAddress2;
+var currMarker;
 
 function initMap() {
 
@@ -14,13 +16,12 @@ function initMap() {
 		{title: 'T4', location: {lat: 37.617813, lng: -122.395200}},
 		{title: 'Sharetea', location: {lat: 37.891516, lng: -122.266048}},
 		{title: 'Gongcha', location: {lat: 37.579691, lng: -122.327598}}
-	]
+	];
 
 	var map;
 	var markers = [];
-	// function initMap() {
 
-	var center = {lat: 37.705412, lng: -122.444260}
+	var center = {lat: 37.705412, lng: -122.444260};
 	var largeInfowindow;
 
 	largeInfowindow = new google.maps.InfoWindow();
@@ -35,17 +36,27 @@ function initMap() {
 	function populateInfoWindow(marker, infowindow) {
 		if(infowindow.marker != marker) {
 			infowindow.marker = marker;
+			marker.setAnimation(google.maps.Animation.BOUNCE);
 
-			// infowindow.setContent('<div>' + marker.title + '</div>');
 			yelpSearch(marker, infowindow);
 
-			// console.log("Business address " + businessAddress); // undefined
 			infowindow.open(map, marker);
 			infowindow.addListener('closeclick', function() {
 				infowindow.marker = null;
 			});
 		}
+		currMarker = marker;
 	} // QUESTION: why does previous marker's infowindow content shows up in another markers
+
+	function addListenerToMarker(marker){
+		marker.addListener('click', function() {
+			if(currMarker.getAnimation() !== null){
+				currMarker.setAnimation(null);
+			}
+			populateInfoWindow(this, largeInfowindow);
+		});
+	}
+
 
 	// knockout for list, filter, and anything subject to change, tracking click events on list
 	// NOT by knockout Maps API, creating markers, tracking click events on markers, making map, refreshing map
@@ -57,6 +68,7 @@ function initMap() {
 		this.markersObservableArray = ko.observableArray();
 		this.filteredArray = ko.observableArray();
 
+		// filters and show only those that is a possible match
 		this.filterSearch = ko.computed(function() {
 			var search = this.search().toLowerCase();
 			if(!search) {
@@ -79,6 +91,7 @@ function initMap() {
 			}
 		}, this);
 
+		// creates the markers in the beginning when the page loads
 		this.createMarkers = ko.computed(function() {
 			for(var i = 0; i < locations.length; i++){
 				var position = locations[i].location;
@@ -91,14 +104,19 @@ function initMap() {
 				});
 				markers.push(marker);
 				markersObservableArray.push(marker);
-				marker.addListener('click', function() {
-					populateInfoWindow(this, largeInfowindow);
-				});
+				addListenerToMarker(marker);
+
+
 			}
+			currMarker = markers[markers.length-1];
 		}, this);
 
+		// animates when an item in the list is clicked
 		this.listClick = function() {
-
+			if(currMarker.getAnimation() !== null){
+				currMarker.setAnimation(null);
+			}
+			this.setAnimation(google.maps.Animation.BOUNCE);
 			populateInfoWindow(this, largeInfowindow);
 		}
 	};
@@ -106,6 +124,7 @@ function initMap() {
 	ko.applyBindings(viewModel(locations));
 }
 
+// authenitcates to use Yelp API
 function authenticateYelp() {
 
 	var requestURL = 'https://api.yelp.com/oauth2/token';
@@ -115,21 +134,24 @@ function authenticateYelp() {
 
 	request.open('POST', proxyURL + '/' + requestURL, true);
 	request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-	// request.setRequestHeader("Authorization", "Bearer Wo_d2-5p_y2BCYMv2lHSRjkEGDXk4NeiU73lOtwSgZEeGOTR5pnbNxl4ymZ1E4REXrB9lSrny_VxO5JxYGiBahIzkH1zYLTdi0u_0loblRslBBAsjWzkX8zJzlISWnYx")
 	request.send("grant_type=client_credentials&client_id=HH-wWLOGhsYppUim8k_DDw&client_secret=4mqMq733uKpPi4LEGpHGPseJ9iDezRVOSREJbbbDJ9kUZXbV702BsqduZ5WQELUX");
 	request.onreadystatechange = function() {
-		if(request.readyState == 4 && request.status == 200){
-			var jsonResponse = JSON.parse(request.response);
-			storeToken(jsonResponse);
-			// console.log("Request.response = " + request.response);
+		if(request.readyState == 4){
+			if(request.status == 200){
+				var jsonResponse = JSON.parse(request.response);
+				storeToken(jsonResponse);
+			}
 		}
+
 	}
 }
+
+
 function storeToken(response) {
 	access_token = response.access_token;
-	// console.log("storeToken = " + access_token);
 }
 
+// uses the yelp api
 function yelpSearch(marker, infowindow) {
 	var searchURL = 'https://api.yelp.com/v3/businesses/search';
 	var request = new XMLHttpRequest();
@@ -137,35 +159,35 @@ function yelpSearch(marker, infowindow) {
 	var longitude = marker.getPosition().lng();
 	var title = marker.title;
 	var params = "term=" + title + "&latitude=" + latitude + "&longitude=" + longitude + "&limit=10";
-	// console.log(params);
 	var jsonResponse;
+
 	request.open('GET', proxyURL + '/' + searchURL + "?" + params, true);
 	request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-	// console.log("yelpSearch " + access_token);
 	request.setRequestHeader("Authorization", "Bearer " + access_token);
-	// request.setRequestHeader("Origin", "x-requested-with");
 	request.send();
 
 	request.onreadystatechange = function() {
-		if(request.readyState == 4 && request.status == 200) {
-			jsonResponse = JSON.parse(request.response);
-			storeBusiness(jsonResponse, infowindow, marker);
+		if(request.readyState == 4){
+			if(request.status == 200){
+				jsonResponse = JSON.parse(request.response);
+				storeBusiness(jsonResponse, infowindow, marker);
+			}
+			else {
+				document.getElementById("map").style.display = "none";
+				document.getElementById("error").style.display = "block";
+			}
 		}
 	}
-
-	// console.log(businessInfo);
 }
 
 function storeBusiness(response, infowindow, marker) {
 	businessInfo = response.businesses[0];
 	businessID = businessInfo.id;
-	businessAddress = businessInfo.location.display_address[0];
-	// console.log(businessInfo);
-	// console.log(businessID);
-	// console.log(businessAddress);
+	businessAddress = businessInfo.location.display_address[0]; // number address
+	businessAddress2 = businessInfo.location.display_address[1]; // city, zip
 
 	var content = '<div>' + marker.title + '</div>' +
-	'<div>' + businessAddress + '</div>';
-	// '<div>' + businessAddress[1] + '</div>'
+	'<div>' + businessAddress + '</div>' +
+	'<div>' + businessAddress2 + '</div>';
 	infowindow.setContent(content);
 }

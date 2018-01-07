@@ -5,6 +5,14 @@
 	margin-top: 10px;
 }
 
+#error {
+	display: none;
+	width: 100%;
+	height: 600px;
+	background-color: gray;
+	margin-top: 10px;
+}
+
 #side-bar {
 	width: 100%;
 	height: 600px;
