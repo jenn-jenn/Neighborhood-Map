@@ -33,11 +33,11 @@ function initMap() {
 
 	authenticateYelp();
 
+
 	function populateInfoWindow(marker, infowindow) {
 		if(infowindow.marker != marker) {
 			infowindow.marker = marker;
 			marker.setAnimation(google.maps.Animation.BOUNCE);
-
 			yelpSearch(marker, infowindow);
 
 			infowindow.open(map, marker);
@@ -48,14 +48,6 @@ function initMap() {
 		currMarker = marker;
 	} // QUESTION: why does previous marker's infowindow content shows up in another markers
 
-	function addListenerToMarker(marker){
-		marker.addListener('click', function() {
-			if(currMarker.getAnimation() !== null){
-				currMarker.setAnimation(null);
-			}
-			populateInfoWindow(this, largeInfowindow);
-		});
-	}
 
 
 	// knockout for list, filter, and anything subject to change, tracking click events on list
@@ -104,7 +96,13 @@ function initMap() {
 				});
 				markers.push(marker);
 				markersObservableArray.push(marker);
-				addListenerToMarker(marker);
+
+				marker.addListener('click', function() {
+					if(currMarker.getAnimation() !== null){
+						currMarker.setAnimation(null);
+					}
+					populateInfoWindow(this, largeInfowindow);
+				});
 
 
 			}
@@ -118,8 +116,8 @@ function initMap() {
 			}
 			this.setAnimation(google.maps.Animation.BOUNCE);
 			populateInfoWindow(this, largeInfowindow);
-		}
-	};
+		};
+	}
 
 	ko.applyBindings(viewModel(locations));
 }
@@ -143,7 +141,7 @@ function authenticateYelp() {
 			}
 		}
 
-	}
+	};
 }
 
 
@@ -177,7 +175,7 @@ function yelpSearch(marker, infowindow) {
 				document.getElementById("error").style.display = "block";
 			}
 		}
-	}
+	};
 }
 
 function storeBusiness(response, infowindow, marker) {
