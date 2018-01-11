@@ -33,6 +33,9 @@ function initMap() {
 
 	authenticateYelp();
 
+	largeInfowindow.addListener('closeclick', function(){
+		this.marker.setAnimation(null);
+	});
 
 	function populateInfoWindow(marker, infowindow) {
 		if(infowindow.marker != marker) {
@@ -41,6 +44,7 @@ function initMap() {
 			yelpSearch(marker, infowindow);
 
 			infowindow.open(map, marker);
+
 			infowindow.addListener('closeclick', function() {
 				infowindow.marker = null;
 			});
