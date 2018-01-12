@@ -89,28 +89,46 @@ function initMap() {
 
 		// creates the markers in the beginning when the page loads
 		this.createMarkers = ko.computed(function() {
-			for(var i = 0; i < locations.length; i++){
-				var position = locations[i].location;
-				var title = locations[i].title;
-				var marker = new google.maps.Marker({
-					position: position,
-					title: title,
+			// for(var i = 0; i < locations.length; i++){
+			// 	var position = locations[i].location;
+			// 	var title = locations[i].title;
+			// 	var marker = new google.maps.Marker({
+			// 		position: position,
+			// 		title: title,
+			// 		animation: google.maps.Animation.DROP,
+			// 		map: map
+			// 	});
+			// 	markers.push(marker);
+			// 	markersObservableArray.push(marker);
+
+			// 	marker.addListener('click', function() {
+			// 		if(currMarker.getAnimation() !== null){
+			// 			currMarker.setAnimation(null);
+			// 		}
+			// 		populateInfoWindow(this, largeInfowindow);
+			// 	})
+			// }
+
+			locations.forEach(function(location) {
+				location.marker = new google.maps.Marker({
+					position: location.location,
+					title: location.title,
 					animation: google.maps.Animation.DROP,
 					map: map
 				});
-				markers.push(marker);
-				markersObservableArray.push(marker);
-
-				marker.addListener('click', function() {
+				markers.push(location.marker);
+				markersObservableArray.push(location.marker);
+				location.marker.addListener('click', function() {
 					if(currMarker.getAnimation() !== null){
 						currMarker.setAnimation(null);
 					}
-					populateInfoWindow(this, largeInfowindow);
-				});
+					populateInfoWindow(location.marker, largeInfowindow);
+				})
 
+			});
 
-			}
 			currMarker = markers[markers.length-1];
+
 		}, this);
 
 		// animates when an item in the list is clicked
