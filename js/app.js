@@ -1,5 +1,5 @@
 var proxyURL = 'https://cors-anywhere.herokuapp.com';
-var access_token;
+var access_token = "Wo_d2-5p_y2BCYMv2lHSRjkEGDXk4NeiU73lOtwSgZEeGOTR5pnbNxl4ymZ1E4REXrB9lSrny_VxO5JxYGiBahIzkH1zYLTdi0u_0loblRslBBAsjWzkX8zJzlISWnYx"
 var businessInfo;
 var businessID;
 var businessRating;
@@ -123,7 +123,7 @@ function initMap() {
 						currMarker.setAnimation(null);
 					}
 					populateInfoWindow(location.marker, largeInfowindow);
-				})
+				});
 
 			});
 
@@ -147,14 +147,18 @@ function initMap() {
 // authenitcates to use Yelp API
 function authenticateYelp() {
 
-	var requestURL = 'https://api.yelp.com/oauth2/token';
+	// var requestURL = 'https://api.yelp.com/oauth2/token';
+	var requestURL = 'https://api.yelp.com';
 	var request = new XMLHttpRequest();
 
 	var jsonResponse;
 
-	request.open('POST', proxyURL + '/' + requestURL, true);
+	request.open('GET', proxyURL + '/' + requestURL, true);
 	request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-	request.send("grant_type=client_credentials&client_id=HH-wWLOGhsYppUim8k_DDw&client_secret=4mqMq733uKpPi4LEGpHGPseJ9iDezRVOSREJbbbDJ9kUZXbV702BsqduZ5WQELUX");
+
+	request.setRequestHeader("Authorization", "Bearer " + access_token);
+
+	//request.send("grant_type=client_credentials&client_id=HH-wWLOGhsYppUim8k_DDw&client_secret=4mqMq733uKpPi4LEGpHGPseJ9iDezRVOSREJbbbDJ9kUZXbV702BsqduZ5WQELUX");
 	request.onreadystatechange = function() {
 		if(request.readyState == 4){
 			if(request.status == 200){
