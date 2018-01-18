@@ -1,5 +1,5 @@
 var proxyURL = 'https://cors-anywhere.herokuapp.com';
-var access_token = "Wo_d2-5p_y2BCYMv2lHSRjkEGDXk4NeiU73lOtwSgZEeGOTR5pnbNxl4ymZ1E4REXrB9lSrny_VxO5JxYGiBahIzkH1zYLTdi0u_0loblRslBBAsjWzkX8zJzlISWnYx";
+var API_KEY = "4NgnM8URd6l42HA5Eyl3nTox-Wqz00BRfkBeR2wHY0xsILyPexJ3JEeoRJ0YwDVOY6iiH8j3kpo3BWvgVmgA22SQGJ9oz1nhhAPXgS10h7TcXCEqpWUSL-MhixBgWnYx";
 var businessInfo;
 var businessID;
 var businessRating;
@@ -52,11 +52,9 @@ function initMap() {
 		currMarker = marker;
 	} // QUESTION: why does previous marker's infowindow content shows up in another markers
 
-
-
 	// knockout for list, filter, and anything subject to change, tracking click events on list
 	// NOT by knockout Maps API, creating markers, tracking click events on markers, making map, refreshing map
-	function viewModel(locations) {
+	function ViewModel(locations) {
 
 		this.locObservableArray = ko.observableArray(locations);
 		this.search = ko.observable('');
@@ -89,26 +87,6 @@ function initMap() {
 
 		// creates the markers in the beginning when the page loads
 		this.createMarkers = ko.computed(function() {
-			// for(var i = 0; i < locations.length; i++){
-			// 	var position = locations[i].location;
-			// 	var title = locations[i].title;
-			// 	var marker = new google.maps.Marker({
-			// 		position: position,
-			// 		title: title,
-			// 		animation: google.maps.Animation.DROP,
-			// 		map: map
-			// 	});
-			// 	markers.push(marker);
-			// 	markersObservableArray.push(marker);
-
-			// 	marker.addListener('click', function() {
-			// 		if(currMarker.getAnimation() !== null){
-			// 			currMarker.setAnimation(null);
-			// 		}
-			// 		populateInfoWindow(this, largeInfowindow);
-			// 	})
-			// }
-
 			locations.forEach(function(location) {
 				location.marker = new google.maps.Marker({
 					position: location.location,
@@ -124,11 +102,8 @@ function initMap() {
 					}
 					populateInfoWindow(location.marker, largeInfowindow);
 				});
-
 			});
-
 			currMarker = markers[markers.length-1];
-
 		}, this);
 
 		// animates when an item in the list is clicked
@@ -140,69 +115,61 @@ function initMap() {
 			populateInfoWindow(this, largeInfowindow);
 		};
 	}
-
-	ko.applyBindings(viewModel(locations));
+	ko.applyBindings(ViewModel(locations));
 }
 
 // authenitcates to use Yelp API
 function authenticateYelp() {
 
-	// var requestURL = 'https://api.yelp.com/oauth2/token';
-	var requestURL = 'https://api.yelp.com';
-	var request = new XMLHttpRequest();
+	var settings = {
+	  "async": true,
+	  "crossDomain": true,
+	  "url": proxyURL + '/' + "https://api.yelp.com/v3/businesses/search?title=teaone&latitude=37.780908&longitude=-122.476851&limit=10",
+	  "method": "GET",
+	  "headers": {
+	    "authorization": "Bearer 4NgnM8URd6l42HA5Eyl3nTox-Wqz00BRfkBeR2wHY0xsILyPexJ3JEeoRJ0YwDVOY6iiH8j3kpo3BWvgVmgA22SQGJ9oz1nhhAPXgS10h7TcXCEqpWUSL-MhixBgWnYx",
+	    "cache-control": "no-cache",
+	  }
+	}
 
-	var jsonResponse;
-
-	request.open('GET', proxyURL + '/' + requestURL, true);
-	request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-
-	request.setRequestHeader("Authorization", "Bearer " + access_token);
-
-	//request.send("grant_type=client_credentials&client_id=HH-wWLOGhsYppUim8k_DDw&client_secret=4mqMq733uKpPi4LEGpHGPseJ9iDezRVOSREJbbbDJ9kUZXbV702BsqduZ5WQELUX");
-	request.onreadystatechange = function() {
-		if(request.readyState == 4){
-			if(request.status == 200){
-				var jsonResponse = JSON.parse(request.response);
-				storeToken(jsonResponse);
-			}
-		}
-
-	};
-}
-
-
-function storeToken(response) {
-	access_token = response.access_token;
+	$.ajax(settings).done(function (response) {
+	  console.log("authenitcated");
+	})
+	.fail(function() {
+		console.log("authenitcation error");
+		document.getElementById("map").style.display = "none";
+		document.getElementById("error").style.display = "block";
+	});
 }
 
 // uses the yelp api
 function yelpSearch(marker, infowindow) {
-	var searchURL = 'https://api.yelp.com/v3/businesses/search';
-	var request = new XMLHttpRequest();
+
 	var latitude = marker.getPosition().lat();
 	var longitude = marker.getPosition().lng();
 	var title = marker.title;
-	var params = "term=" + title + "&latitude=" + latitude + "&longitude=" + longitude + "&limit=10";
-	var jsonResponse;
 
-	request.open('GET', proxyURL + '/' + searchURL + "?" + params, true);
-	request.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-	request.setRequestHeader("Authorization", "Bearer " + access_token);
-	request.send();
+	var settings = {
+	  "async": true,
+	  "crossDomain": true,
+	  "url": proxyURL + '/' + "https://api.yelp.com/v3/businesses/searc?" + "term=" + title + "&latitude=" + latitude + "&longitude=" + longitude + "&limit=10",
+	  "method": "GET",
+	  "headers": {
+	    "authorization": "Bearer 4NgnM8URd6l42HA5Eyl3nTox-Wqz00BRfkBeR2wHY0xsILyPexJ3JEeoRJ0YwDVOY6iiH8j3kpo3BWvgVmgA22SQGJ9oz1nhhAPXgS10h7TcXCEqpWUSL-MhixBgWnYx",
+	    "cache-control": "no-cache",
+	  }
+	}
 
-	request.onreadystatechange = function() {
-		if(request.readyState == 4){
-			if(request.status == 200){
-				jsonResponse = JSON.parse(request.response);
-				storeBusiness(jsonResponse, infowindow, marker);
-			}
-			else {
-				document.getElementById("map").style.display = "none";
-				document.getElementById("error").style.display = "block";
-			}
-		}
-	};
-}
+	$.ajax(settings).done(function (response) {
+		storeBusiness(response, infowindow, marker);
+	})
+	.fail(function(){
+		console.log("search error");
+		document.getElementById("map").style.display = "none";
+		document.getElementById("error").style.display = "block";
+	});
+
+};
 
 function storeBusiness(response, infowindow, marker) {
 	businessInfo = response.businesses[0];
