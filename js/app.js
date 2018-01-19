@@ -38,6 +38,7 @@ function initMap() {
 	});
 
 	function populateInfoWindow(marker, infowindow) {
+		console.log("populateInfoWindow");
 		if(infowindow.marker != marker) {
 			infowindow.marker = marker;
 			marker.setAnimation(google.maps.Animation.BOUNCE);
@@ -108,6 +109,7 @@ function initMap() {
 
 		// animates when an item in the list is clicked
 		this.listClick = function() {
+			console.log("listClick");
 			if(currMarker.getAnimation() !== null){
 				currMarker.setAnimation(null);
 			}
@@ -130,10 +132,10 @@ function authenticateYelp() {
 	    "authorization": "Bearer 4NgnM8URd6l42HA5Eyl3nTox-Wqz00BRfkBeR2wHY0xsILyPexJ3JEeoRJ0YwDVOY6iiH8j3kpo3BWvgVmgA22SQGJ9oz1nhhAPXgS10h7TcXCEqpWUSL-MhixBgWnYx",
 	    "cache-control": "no-cache",
 	  }
-	}
+	};
 
 	$.ajax(settings).done(function (response) {
-	  console.log("authenitcated");
+	  // console.log("authenitcated");
 	})
 	.fail(function() {
 		console.log("authenitcation error");
@@ -144,7 +146,7 @@ function authenticateYelp() {
 
 // uses the yelp api
 function yelpSearch(marker, infowindow) {
-
+	console.log("in yelpSearch");
 	var latitude = marker.getPosition().lat();
 	var longitude = marker.getPosition().lng();
 	var title = marker.title;
@@ -152,13 +154,14 @@ function yelpSearch(marker, infowindow) {
 	var settings = {
 	  "async": true,
 	  "crossDomain": true,
-	  "url": proxyURL + '/' + "https://api.yelp.com/v3/businesses/searc?" + "term=" + title + "&latitude=" + latitude + "&longitude=" + longitude + "&limit=10",
+	  "url": proxyURL + '/' + "https://api.yelp.com/v3/businesses/search?" + "term=" + title + "&latitude=" + latitude + "&longitude=" + longitude + "&limit=10",
+	  // "url": "https://api.yelp.com/v3/businesses/search?" + "term=" + title + "&latitude=" + latitude + "&longitude=" + longitude + "&limit=10",
 	  "method": "GET",
 	  "headers": {
 	    "authorization": "Bearer 4NgnM8URd6l42HA5Eyl3nTox-Wqz00BRfkBeR2wHY0xsILyPexJ3JEeoRJ0YwDVOY6iiH8j3kpo3BWvgVmgA22SQGJ9oz1nhhAPXgS10h7TcXCEqpWUSL-MhixBgWnYx",
 	    "cache-control": "no-cache",
 	  }
-	}
+	};
 
 	$.ajax(settings).done(function (response) {
 		storeBusiness(response, infowindow, marker);
@@ -169,7 +172,7 @@ function yelpSearch(marker, infowindow) {
 		document.getElementById("error").style.display = "block";
 	});
 
-};
+}
 
 function storeBusiness(response, infowindow, marker) {
 	businessInfo = response.businesses[0];
